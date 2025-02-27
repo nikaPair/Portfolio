@@ -326,6 +326,7 @@ body {
         margin-top: 50px;
         flex-direction: column;
         align-items: center;
+        text-align: center;
         gap: 100px;
 
         .about-description {
@@ -336,8 +337,115 @@ body {
                 font-size: 16px;
             }
             .light {
-                right: 90px;
+                left: 0px;
                 top: -20px;
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+.recent-works {
+    background-image: url(../src/images/doodle.png);
+    background-size: 514px 360px;
+    background-repeat: repeat;
+    padding: 100px 25px;
+    margin-top: 200px;
+    .work-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        h2 {
+            font-size: 64px;
+            font-weight: bold;
+            color: #00adb5;
+            span {
+                color: #fff;
+            }
+        }
+        .categories {
+            ul {
+                display: flex;
+                gap: 16px;
+                li {
+                    background-color: #393e4684;
+                    font-size: 18px;
+                    padding: 15px;
+                    &:hover {
+                        background-color: #00adb5;
+                    }
+                    border-radius: 24px;
+                    a {
+                        color: #eeeeee;
+                        padding: 15px;
+
+                        &:hover {
+                            color: #ffff;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 770px) {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ul {
+                    justify-content: center;
+                    flex-direction: column;
+                    width: fit-content;
+                    li {
+                        a {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .projects-cards {
+            display: flex;
+            gap: 48px;
+
+            .project-card {
+                padding: 20px 50px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                transition: all ease 0.3s;
+
+                gap: 24px;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                p {
+                    font-size: 32px;
+                    color: #00adb5;
+                    font-weight: bold;
+                }
+                background-color: #393e4684;
+                border-radius: 16px;
+                a {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                justify-content: space-between;
+                .project-card {
+                    max-width: 250px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            @media screen and (max-width: 900px) {
+                flex-direction: column;
+                align-items: center;
+                .project-card {
+                    max-width: 300px;
+                }
             }
         }
     }

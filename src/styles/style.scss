@@ -450,3 +450,211 @@ body {
         }
     }
 }
+
+.contact-form {
+    .form-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 170px;
+        padding-top: 100px;
+        .form-heading {
+            max-width: 510px;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 64px;
+                color: #eee;
+                span {
+                    color: #00adb5;
+                }
+            }
+            img {
+                max-width: 255px;
+                align-self: flex-end;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding-top: 20px;
+            .inputs {
+                display: flex;
+                gap: 24px;
+                .input-wrapper {
+                    position: relative;
+
+                    input {
+                        background: #393e4680;
+                        padding: 16px 24px;
+                        font-family: Poppins;
+                        font-size: 18px;
+                        font-weight: bold;
+                        max-width: 288px;
+                        border: none;
+                        outline: none;
+                        border-radius: 16px;
+                        color: #eeeeee6c;
+                    }
+                    &:first-child::after {
+                        content: "Name";
+                        position: absolute;
+                        top: -35px;
+                        left: 0px;
+                        color: #fff;
+                        font-family: Poppins;
+                        font-size: 18px;
+                        font-weight: bold;
+                        pointer-events: none;
+                    }
+                    &:last-child::after {
+                        content: "Email";
+                        position: absolute;
+                        top: -35px;
+                        left: 0px;
+                        color: #fff;
+                        font-family: Poppins;
+                        font-size: 18px;
+                        font-weight: bold;
+                        pointer-events: none;
+                    }
+                }
+            }
+            .textarea-wrapper {
+                position: relative;
+                textarea {
+                    background: #393e4680;
+                    border: none;
+                    outline: none;
+                    border-radius: 16px;
+                    padding: 16px 24px;
+                    color: #eeeeee6c;
+                    font-family: Poppins;
+                    font-size: 18px;
+                    font-weight: bold;
+                    resize: none;
+                    position: relative;
+                    scrollbar-width: none;
+                }
+                &::after {
+                    content: "Message";
+                    position: absolute;
+                    top: -35px;
+                    left: 0px;
+                    color: #fff;
+                    font-family: Poppins;
+                    font-size: 18px;
+                    font-weight: bold;
+                    pointer-events: none;
+                }
+            }
+
+            button {
+                padding: 10px 0;
+                cursor: pointer;
+                background: #00adb5;
+                color: #fff;
+                border: none;
+                border-radius: 24px;
+                width: 232px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                font-family: Poppins;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width: 700px) {
+            padding: 100px 15px;
+            form {
+                .inputs {
+                    flex-direction: column;
+                    gap: 40px;
+                    align-items: center;
+                    .input-wrapper {
+                        width: 100%;
+                        input {
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    margin: 100px 0;
+    border-top: 1px solid #eeeeee2e;
+    .footer-container {
+        padding: 120px 20px 0px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 38px;
+        .footer-nav {
+            ul {
+                display: flex;
+                gap: 48px;
+                li {
+                    a {
+                        color: #eee;
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: baseline;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+        .footer-social {
+            ul {
+                display: flex;
+                gap: 24px;
+                a {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: #393e4680;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .terms {
+            color: #eee;
+            font-size: 18px;
+            font-family: Poppins;
+        }
+    }
+
+    @media screen and (max-width: 460px) {
+        .footer-container {
+            .footer-nav {
+                ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            .terms {
+                font-size: 16px;
+            }
+        }
+    }
+}
